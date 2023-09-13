@@ -9,7 +9,7 @@ This is a template to use Flask with Svelte while using vite to build 👀
 * `cd client`
 * `npm install`
 * `npm run autobuild`
-* Run `server.py`
+* Run `app.py`
 
 **Your app should start on `localhost:5000`**
 

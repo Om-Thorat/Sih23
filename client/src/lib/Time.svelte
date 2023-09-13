@@ -12,4 +12,4 @@
     onMount(utime)
 </script>
 
-<span>{time}</span>
+<span class="text-xl font-mono font-bold">{time}</span>

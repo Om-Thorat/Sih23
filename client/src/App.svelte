@@ -5,8 +5,8 @@
   import Time from './lib/Time.svelte';
 </script>
 
-<main>
-  <div>
+<main class="bg-[#111212] text-white flex flex-col min-h-[100svh] justify-center items-center gap-5">
+  <div class="flex scale-150">
     <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
       <img src={viteLogo} class="logo" alt="Vite Logo" />
     </a>
@@ -16,7 +16,7 @@
   </div>
   <h1>Vite + Svelte</h1>
 
-  <div class="card">
+  <div class="text-lg text-yellow-200">
     <Counter />
   </div>
   <Time />
@@ -26,7 +26,7 @@
     Check out <a href="https://github.com/sveltejs/kit#readme" target="_blank" rel="noreferrer">SvelteKit</a>, the official Svelte app framework powered by Vite!
   </p>
 
-  <p class="read-the-docs">
+  <p class="text-gray-600">
     Click on the Vite and Svelte logos to learn more
   </p>
 </main>
