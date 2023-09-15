@@ -1,6 +1,11 @@
-from flask import Flask, send_from_directory
+from flask import Flask, send_from_directory, request
+import pymongo
+import os
 from datetime import datetime
 app = Flask(__name__)
+
+client = pymongo.MongoClient((os.environ['MONGODB_URI']))
+db = client['Track01']
 
 # To expose the main page
 @app.route('/')
@@ -19,7 +24,24 @@ def gettime():
 
 @app.route("/login")
 def login():
-    return str('farmer')
-
-# if __name__ == "__main__":
-#     app.run(debug=True)
+    user = request.args.get("user");
+    pas = request.args.get("pass");
+    job = request.args.get("job");
+    hpas = pas;
+    posts = db.posts
+    postform = {
+        "user": user,
+        "pass": pas,
+        "job": job
+    }
+    post = posts.find_one({"user":user})
+    if not post:
+        posts.insert_one(postform)
+    else:
+        if hpas == post['pass']:
+            return str(post['job'])
+        else:
+            return "HEHE"
+        
+if __name__ == "__main__":
+    app.run(debug=True)
