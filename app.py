@@ -19,6 +19,7 @@ def gettime():
 
 @app.route("/login")
 def login():
+    
     return str('farmer')
 
 if __name__ == "__main__":
