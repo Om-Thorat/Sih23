@@ -1,14 +1,23 @@
 {
+    "version": 2,
     "builds": [
       {
-        "src": "x.py",
-        "use": "@vercel/python"
+        "src": "client",
+        "use": "@vercel/static-build",
+        "config": {
+          "distDir": "dist"
+        }
       }
     ],
     "routes": [
       {
+        "src": "/api/(.*)",
+        "dest": "app.py"
+      },
+      {
         "src": "/(.*)",
-        "dest": "x.py"
+        "dest": "client/dist/$1"
       }
     ]
   }
+  
