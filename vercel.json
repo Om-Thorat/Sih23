@@ -13,10 +13,6 @@
     {
       "src": "/(.*)",
       "dest": "app.py"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "client/dist/$1"
     }
   ]
 }
