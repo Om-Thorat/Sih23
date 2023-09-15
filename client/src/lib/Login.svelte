@@ -1,6 +1,13 @@
 <script lang="ts">
     let username:string;
     let password:string;
+    import {state} from "../store";
+
+    async function login(){
+        let a = await fetch(`/login?user=${username}&pass=${password}`);
+        let x:string = await a.text();
+        state.set(x);
+    }
 </script>
 
 
@@ -32,6 +39,6 @@
     <input placeholder="Password" bind:value={password} class="bg-[#1d1f1f] h-full w-full text-lg focus:outline-none"/>
   </div>
   <div>
-    <button class="btn btn-outline w-full rounded-2xl h-10 hover:bg-green-300">Login ></button>
+    <button on:click={login} class="btn btn-outline w-full rounded-2xl h-10 hover:bg-green-300">Login ></button>
   </div>
 </div>

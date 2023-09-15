@@ -17,5 +17,9 @@ def assets(path):
 def gettime():
     return str(datetime.now().strftime("%H:%M:%S"))
 
+@app.route("/login")
+def login():
+    return str('farmer')
+
 if __name__ == "__main__":
     app.run(debug=True)

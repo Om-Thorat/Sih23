@@ -13,8 +13,6 @@
     currstate = e;
     console.log(currstate)
   })
-  let mode: string;
-  mode = "farmer";
 </script>
 
 <main
@@ -25,9 +23,10 @@
     <span>hi</span>
   {:else if currstate=="loggingin"}
     <Login />
+  {:else if currstate=="farmer"}
+    <Farmer/>
   {:else}
     <Loginpage />
-    <!-- <Login /> -->
   {/if}
   <Footer />
 </main>
