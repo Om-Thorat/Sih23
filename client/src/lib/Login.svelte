@@ -10,12 +10,12 @@
     })
     async function login(){
         let a = await fetch(`/login?user=${username}&pass=${password}&job=${lmode}`);
-        let x:string = await a.text();
-        if (x == "HEHE"){
-            msg = "Wrong password bitch"
+        let x:string = await a.json();
+        if (x[0] == "nope"){
+            msg = x[1];
         }
         else{
-            state.set(x);
+            state.set(x[1]);
         }
     }
 </script>
