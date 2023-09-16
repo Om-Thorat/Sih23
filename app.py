@@ -24,6 +24,15 @@ def assets(path):
 def gettime():
     return str(datetime.now().strftime("%H:%M:%S"))
 
+@app.route("/upload")
+def upload():
+    img=request.args.get("image");
+    users = db.users
+    uploadimage={"image":img}
+    users.insert_one(uploadimage)
+    return ["image uploaded"]
+
+
 @app.route("/login")
 def login():
     user = request.args.get("user");
@@ -42,7 +51,7 @@ def login():
     entry = users.find_one({"user":user})
     if not entry:
         users.insert_one(entryform)
-        return ["hehe"]
+        return ["yes","New",job ,"registered"]
     else:
         if entry['job'] != job:
             return ["nope","Wrong job"]
