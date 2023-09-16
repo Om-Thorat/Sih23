@@ -51,7 +51,7 @@ def login():
     entry = users.find_one({"user":user})
     if not entry:
         users.insert_one(entryform)
-        return ["yes","New",job ,"registered"]
+        return ["yep",job ,"registered"]
     else:
         if entry['job'] != job:
             return ["nope","Wrong job"]

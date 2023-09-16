@@ -2,6 +2,7 @@
     let username:string;
     let password:string;
     let lmode:string;
+    let loginbutt:HTMLButtonElement;
     let msg:string = "";
     import {state} from "../store";
     import {mode} from "../store";
@@ -10,6 +11,9 @@
         lmode = e;
     })
     async function login(){
+        loginbutt.innerText = "logging in ..."
+        loginbutt.classList.add("bg-green-300")
+        loginbutt.classList.add("text-black")
         let a = await fetch(`/login?user=${username}&pass=${password}&job=${lmode}`);
         let x:string = await a.json();
         if (x[0] == "nope"){
@@ -50,7 +54,7 @@
     <svg class="h-10 translate-y-1 stroke-white stroke-1 px-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 80" x="0px" y="0px" style="&#10;    fill: white;&#10;"><g data-name="Layer 2"><path d="M12,28a4,4,0,1,0,4,4A4,4,0,0,0,12,28Zm0,6a2,2,0,1,1,2-2A2,2,0,0,1,12,34Z"/><path d="M30.65,38H45a1,1,0,0,0,.83-.45L47,35.87l1,1.65a1,1,0,0,0,.86.48H55a1,1,0,0,0,.78-.38l4-5a1,1,0,0,0,.15-1l-2-5A1,1,0,0,0,57,26H30.65a14,14,0,1,0,0,12ZM6,32a12,12,0,0,1,23.08-4.62A1,1,0,0,0,30,28H56.32l1.53,3.83L54.52,36H49.37l-1.52-2.52A1,1,0,0,0,47,33a1,1,0,0,0-.85.44L44.46,36H30a1,1,0,0,0-.92.62A12,12,0,0,1,6,32Z"/><rect x="48" y="30" width="4" height="2"/><rect x="32" y="30" width="12" height="2"/></g></svg>
     <input placeholder="Password" bind:value={password} class="bg-[#1d1f1f] h-full w-full text-lg focus:outline-none"/>
   </div>
-    <button on:click={login} class="btn btn-outline w-full rounded-2xl h-10 hover:bg-green-300">Login ></button>
+    <button bind:this={loginbutt} on:click={login} class="btn btn-outline w-full rounded-2xl h-10 hover:bg-green-300">Login ></button>
   <span class="text-red-500">
     {msg}
   </span>
