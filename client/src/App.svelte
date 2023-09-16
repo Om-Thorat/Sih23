@@ -28,8 +28,7 @@
   {:else if currstate=="scientist"}
     <Scientist />
   {:else}
-    <Scientist />
-    <!-- <Loginpage /> -->
+    <Loginpage />
     <!-- <Scicrop /> -->
   {/if}
   <Footer />
