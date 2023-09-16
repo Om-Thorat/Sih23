@@ -3,6 +3,7 @@
   import Footer from "./lib/Footer.svelte";
   import Login from "./lib/Login.svelte";
   import Loginpage from "./lib/Loginpage.svelte";
+    import Scicrop from "./lib/Scicrop.svelte";
   import Scientist from "./lib/Scientist.svelte";
 
   let currstate:string;
@@ -25,7 +26,7 @@
   {:else if currstate=="farmer"}
     <Farmer/>
   {:else if currstate=="scientist"}
-    <Scientist />
+    <Scicrop />
   {:else}
     <Loginpage />
   {/if}
