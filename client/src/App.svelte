@@ -22,7 +22,6 @@
   {#if currstate=="loggedin"}
     <span>hi</span>
   {:else if currstate=="loggingin"}
-    
     <Login />
   {:else if currstate=="farmer"}
     <Farmer/>

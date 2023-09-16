@@ -5,6 +5,7 @@
     let msg:string = "";
     import {state} from "../store";
     import {mode} from "../store";
+  import Title from "./Title.svelte";
     mode.subscribe((e)=>{
         lmode = e;
     })
@@ -21,6 +22,7 @@
 </script>
 
 
+<Title />
 <div class="flex flex-col gap-3 items-center">
   <div class="flex flex-row w-full items-center bg-[#1d1f1f] p-3 rounded-2xl focus-within:outline outline-white">
     <svg
