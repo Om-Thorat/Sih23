@@ -1,4 +1,5 @@
 <script lang="ts">
+import Title from "./Title.svelte";
 import {state} from "../store";
 import {mode} from "../store";
 
@@ -8,7 +9,7 @@ function Goin(e:string): null {
   return null;
 }
 </script>
-
+<Title />
 <div class="flex flex-row min-h-[70%] w-screen items-center justify-evenly">
     <button class="w-1/5 aspect-square rounded-full border-white border-2 transition-all hover:border-opacity-0" on:click={()=>{Goin("farmer")}}>
         <img src="/Farmer.png" alt="Farmer" class="scale-90 transition-all cursor-pointer hover:scale-100" />

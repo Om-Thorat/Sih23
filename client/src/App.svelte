@@ -18,10 +18,11 @@
 <main
   class="bg-[#111212] text-white flex flex-col min-h-[100svh] justify-center items-center gap-5"
 >
-<Title />
+  
   {#if currstate=="loggedin"}
     <span>hi</span>
   {:else if currstate=="loggingin"}
+    
     <Login />
   {:else if currstate=="farmer"}
     <Farmer/>
