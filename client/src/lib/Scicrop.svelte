@@ -4,9 +4,9 @@
     import Logtitle from "./Logtitle.svelte";
 </script>
 
-<div class="flex flex-row min-h-[70%] w-screen items-center justify-evenly">
+<div class="flex flex-row min-h-[70%] w-screen items-center justify-evenly left-5">
     <Logtitle job={"Scientist"} />
-    <div class="flex items-center gap-10 h-[40svh] w-full justify-center">
+    <div class="flex items-center gap-10 h-[60svh] w-full justify-right left-2">
         <File />
         <div class="flex flex-col gap-6 h-full justify-between w-1/4 ">
             
