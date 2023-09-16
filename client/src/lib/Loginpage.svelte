@@ -11,10 +11,16 @@ function Goin(e:string): null {
 </script>
 <Title />
 <div class="flex flex-row min-h-[70%] w-screen items-center justify-evenly">
-    <button class="w-1/5 aspect-square rounded-full border-white border-2 transition-all hover:border-opacity-0" on:click={()=>{Goin("farmer")}}>
+    <button on:click={()=>{Goin("farmer")}} class="flex w-1/5 items-center justify-center flex-col">
+    <div class="aspect-square rounded-full border-white border-2 transition-all hover:border-opacity-0">
         <img src="/Farmer.png" alt="Farmer" class="scale-90 transition-all cursor-pointer hover:scale-100" />
+    </div>
+    <span class="text-3xl pt-5 ibm">log in as Farmer</span>
     </button>
-    <button class="w-1/5 aspect-square rounded-full border-white border-2 transition-all hover:border-opacity-0" on:click={()=>{Goin("scientist")}}>
-        <img src="/Scientist.png" alt="Scientist" class="scale-90 transition-all cursor-pointer hover:scale-100" />
+    <button on:click={()=>{Goin("scientist")}} class="flex w-1/5 items-center justify-center flex-col">
+        <div class="aspect-square rounded-full border-white border-2 transition-all hover:border-opacity-0">
+            <img src="/Scientist.png" alt="Farmer" class="scale-90 transition-all cursor-pointer hover:scale-100" />
+        </div>
+        <span class="text-3xl pt-5 ibm">log in as Scientist</span>
     </button>
 </div>
