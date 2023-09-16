@@ -3,8 +3,6 @@
   import Footer from "./lib/Footer.svelte";
   import Login from "./lib/Login.svelte";
   import Loginpage from "./lib/Loginpage.svelte";
-  import Title from "./lib/Title.svelte";
-  import Grid from "./lib/Grid.svelte";
 
   let currstate:string;
   import { state } from './store';
