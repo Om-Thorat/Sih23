@@ -31,6 +31,7 @@
     <Scicrop />
   {:else}
     <Loginpage />
+    <!-- <Scicrop /> -->
   {/if}
   <Footer />
 </main>
