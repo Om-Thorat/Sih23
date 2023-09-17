@@ -27,9 +27,10 @@
     <Farmer/>
   {:else if currstate=="scientist"}
     <Scientist />
+  {:else if currstate=="scricrop"}
+    <Scicrop />
   {:else}
     <Loginpage />
-    <!-- <Scicrop /> -->
   {/if}
   <Footer />
 </main>
